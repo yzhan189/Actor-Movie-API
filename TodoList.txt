@@ -1,0 +1,57 @@
+1.
+more tests for graph
+ ./node_modules/mocha/bin/mocha
+
+2.
+Part I : Data Analysis
+You have a client! Write code to help him answer the following questions. Be sure to include graphs/charts/scatterplots along with the code you write to support your answer.
+Who are the "hub" actors in your dataset? That is, which actors have the most connections with other actors? Two actors have a connection if they have acted in the same movie together.
+Is there an age group that generates the most amount of money? What does the correlation between age and grossing value look like?
+You are also encouraged to perform your own analysis on your data, and may receive bonus points for interesting and/or well presented analysis. Note that you should be using the programming language you used last week for this part of the assignment.
+(use data.json)
+
+3.
+https://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm
+https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en
+
+API should include the following endpoints: GET, PUT, POST and DELETE.
+Get:
+/actors?attr={attr_value} Example: /actors?name=”Bob”
+Filters out all actors that don’t have “Bob” in their name (Should allow for similar filtering for any other attribute)
+/movies?attr={attr_value} Example: /movies?name=”Shawshank&Redemption”
+Filters out all actors that don’t have “Shawshank&Redemption” in their name (Should allow for similar filtering for any other attribute)
+/actors/:{actor_name} Example: /actors/Bruce_Willis
+Returns the first Actor object that has name “Bruce Willis”, displays actor attributes and metadata
+/movies/:{movie_name} Example: /movies/Shawshank_Redemption
+Returns the first Movie object that has correct name, displays movie attributes and metadata
+You should also be able to filter using boolean operators AND and OR, i.e. name=”Bob”|name=”Matt”, name=”Bob”&age=35
+Put:
+/actors
+Leverage PUT requests to update standing content in backend
+curl -i -X PUT -H "Content-Type: application/json" -d ' {"total_gross":500}'http://localhost:4567/api/a/actors/Bruce_Willis
+/movies
+Leverage PUT requests to update standing content in backend
+curl -i -X PUT -H "Content-Type: application/json" -d ' {"box_office":500}' http://localhost:4567/api/m/movies/Shawshank_Redemption
+Post:
+/actors
+Leverage POST requests to ADD content to backend
+curl -i -X POST -H "Content-Type: application/json" -d'{"name":"Billy Joe"}' {API URL}/actors
+/movies
+Leverage POST requests to ADD content to backend
+curl -i -X POST -H "Content-Type: application/json" -d'{"name":"Captain America"}' {API URL}/movies
+Delete:
+/actors/:{actor_name}
+Leverage DELETE requests to REMOVE content from backend
+curl -i -X DELETE -H "Content-Type: application/json" {API URL}/actors/Bruce_Willis
+/movies/:{movie_name}
+Leverage DELETE requests to REMOVE content from backend
+curl -i -X DELETE -H "Content-Type: application/json" {API URL}/movies/Shawshank_Redemption
+Your API should return a HTTP Code for each request. At a minimum, you should include 200 OK, 201 Created and 400 Bad Request.
+Your output to all endpoints should be in JSON format. You are not required to put your data on the internet. You can test your API on localhost using POSTMAN.
+
+4.
+Show each actor and movie clearly
+Show the connections between each movie and actor clearly
+Show the age of each actor and the total grossing value of each movie clearly or on demand
+Be readable
+http://visjs.org

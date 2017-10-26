@@ -1,0 +1,15 @@
+
+    {
+        "David Schofield (actor)": {
+          "name": "David Schofield (actor)",
+          "age": 65,
+          "income": 1000,
+          "filmList": []
+        },
+        "Sadie Frost": {
+          "name": "Sadie Frost",
+          "age": 52,
+          "income": 100,
+          "filmList": []
+        }
+}
